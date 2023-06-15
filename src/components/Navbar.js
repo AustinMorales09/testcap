@@ -1,6 +1,7 @@
 import React from 'react';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import WeatherDropdown from './WeatherDropdown';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     return (
       <div>
@@ -16,16 +17,16 @@ const Navbar = () => {
           <NavDropdown id="nav-dropdown-dark-example"
               title="Browse Categories"
               menuVariant="dark">
-              <NavDropdown.Item href="/artsmusic">Arts & Music</NavDropdown.Item>
-              <NavDropdown.Item href="/familyfun">Family Fun</NavDropdown.Item>
-              <NavDropdown.Item href="/fooddrink">Food & Drink</NavDropdown.Item>
-              <NavDropdown.Item href="/heritagehistory">Heritage & History</NavDropdown.Item>
-              <NavDropdown.Item href="/outdoors">Outdoors</NavDropdown.Item>
-              <NavDropdown.Item href="/sports">Sports & Gaming</NavDropdown.Item>
+              <Link className='dropdown-item' to="/artsmusic">Arts & Music</Link>
+              <Link className='dropdown-item' to="/familyfun">Family Fun</Link>
+              <Link className='dropdown-item' to="/fooddrink">Food & Drink</Link>
+              <Link className='dropdown-item' to="/heritagehistory">Heritage & History</Link>
+              <Link className='dropdown-item' to="/outdoors">Outdoors</Link>
+              <Link className='dropdown-item' to="/sports">Sports & Gaming</Link>
               </NavDropdown>
           </div>
-           <div className="col-lg-3"><a className="nav-link" href="/contact"><h4><b>CONTACT</b></h4></a></div>
-            <div className="col-lg-3"><a className="nav-link" href="/about"><h4><b>ABOUT</b></h4></a></div>
+           <div className="col-lg-3"><Link className="nav-link" to="/contact"><h4><b>CONTACT</b></h4></Link></div>
+            <div className="col-lg-3"><Link className="nav-link" to="/about"><h4><b>ABOUT</b></h4></Link></div>
             <div className="col-lg-1"><WeatherDropdown /></div>
         </div></div></div>
       </div>

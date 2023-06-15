@@ -34,7 +34,7 @@ class App extends Component {
       <Route  path="/heritagehistory" component={HeritageHistory} />
       <Route  path="/sports" component={Sports} />
       <Route  path="/outdoors" component={Outdoors} />
-      <Route  path="/user/login" component={ !user ? Login : Home } />
+      {/* <Route  path="/user/login" component={ !user ? Login : Home } /> */}
       </Switch>
 
       <Footer />
